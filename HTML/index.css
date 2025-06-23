@@ -1,0 +1,103 @@
+/* Tag selector */
+h1 {
+  border: 1px solid red;
+  /* margin: 100px; */
+  /* margin: top right bottom left ; */
+  /* margin: 90px 20px 150px 200px; */
+  /* margin: 120px 100px; */
+  /* margin-top: 10px; */
+  /* margin-right: 40px;
+  margin-bottom: 80px;
+  margin-left: 100px;
+  padding: 120px; */
+}
+
+/* Universal selector */
+* {
+  /* border: 1px dotted red; */
+  margin: 0;
+  padding: 0;
+}
+
+/* class selector .*/
+.same {
+  color: blue;
+}
+.a {
+  color: red;
+}
+
+/* id Selector #*/
+#unique {
+  color: green;
+}
+
+/* group selector */
+
+h5,
+h6 {
+  color: yellowgreen;
+}
+
+/* Descendant selector */
+div p {
+  font-size: 30px;
+}
+
+/* child Selector */
+div > p {
+  color: red;
+}
+
+/* adjacent sibling */
+.d + p {
+  color: pink;
+}
+
+/* general sibling */
+.d ~ p {
+  color: brown;
+}
+
+/* Attribute selctor */
+button[type="reset"] {
+  color: red;
+}
+
+/* Pseudo CLasses selector:hover */
+h5:hover {
+  font-size: 80px;
+  color: green;
+}
+
+li:first-child {
+  color: red;
+}
+
+li:nth-child() {
+  color: green;
+  font-size: 60px;
+}
+
+/* Pseudo Elements */
+
+#elements::before {
+  content: "Added Fom CSS ";
+  font-size: 40px;
+  color: blue;
+}
+
+#elements::after {
+  content: "Added Fom CSS in the end ";
+  font-size: 40px;
+  color: blue;
+}
+
+p::first-letter {
+  color: red;
+  font-size: 80px;
+}
+
+p::first-line {
+  background-color: yellow;
+}

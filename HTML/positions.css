@@ -1,0 +1,36 @@
+div {
+  /* view height */
+  height: 80vh;
+  /* view Width */
+  width: 50vw;
+  border: 1px solid red;
+  margin-bottom: 20px;
+}
+
+p {
+  background-color: yellow;
+  color: red;
+  font-size: 20px;
+}
+
+.sticky {
+  position: sticky;
+  top: 40px;
+}
+
+.relative {
+  position: relative;
+  background-color: greenyellow;
+}
+.absolute {
+  position: absolute;
+  right: -120px;
+}
+
+.fixed {
+  position: fixed;
+  bottom: 100px;
+  right: 60px;
+  padding: 30px;
+  border-radius: 50%;
+}

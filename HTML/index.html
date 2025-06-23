@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+    <!-- internal css -->
+    <style>
+      /* selector{
+      css properties
+      } */
+      h1 {
+        color: blue;
+        font-size: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Headings -->
+    <!-- inline css -->
+    <h1 style="color: red">Heading 1</h1>
+    <h2 class="same">Heading 2</h2>
+    <h3 class="same">Heading 3</h3>
+    <h4 id="unique">Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <p id="elements">I want To insert Something</p>
+
+    <!-- paragrapgh tag -->
+    <!--Block level tags: start new lne, take device full width -->
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel fugit earum
+      perferendis unde minima, omnis architecto velit laboriosam obcaecati,
+      totam maiores labore facere aut sapiente exercitationem quisquam eius, eos
+      corporis. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+      Necessitatibus facere, fugiat dolor nam amet hic, voluptates laudantium
+      sapiente voluptate vero voluptatem animi, ipsam natus ullam tempore illo
+      similique quam expedita.
+    </p>
+    <p>asas</p>
+
+    <!-- Inline Level tags: take content width -->
+    <!-- span -->
+    <span
+      >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia atque ab
+      ducimus earum accusantium, quisquam, non laboriosam unde et corrupti
+      laborum ut ea repudiandae porro ipsa incidunt nostrum libero velit?</span
+    >
+    <span>asas</span>
+
+    <div class="b">
+      <h1 class="d">Inside div tag heading</h1>
+      <p class="c">Inside div</p>
+      <p>Inside div</p>
+    </div>
+
+    <!-- list -->
+    <!-- Unordered List ul li:list item -->
+    <ul>
+      <li>simple</li>
+      <li>Hemant</li>
+      <li>Aftab</li>
+      <li>Gaurav</li>
+      <li>Summit</li>
+    </ul>
+    <!-- Ordered list ol and li-->
+    <ol>
+      <li>Aftab</li>
+      <li>Gaurav</li>
+      <li>Summit</li>
+    </ol>
+
+    <!-- anchor tag -->
+    <a href="https://codehubnexus.com/" target="_blank">Vist my Website</a>
+
+    <!-- image tag -->
+    <!-- src=source and alt=alternative -->
+    <img
+      src="https://codehubnexus.com/assets/logov2.png"
+      alt="Url is not correct/Image not found"
+      width="300px"
+      height="40px"
+      title="Logo of codehub Nexus"
+    />
+
+    <form action="">
+      <label for="as">Name</label>
+      <input
+        type="text"
+        name="as"
+        id="as"
+        required
+        placeholder="Enter your name"
+      />
+
+      <label for="email">Email</label>
+      <input
+        type="Email"
+        name="email"
+        id="email"
+        placeholder="Enter your email"
+        required
+      />
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
+    <!-- Table tag -->
+    <!-- table , tr=table row,th=table heading,td=table data, thead,tbody,tfoot -->
+    <table border="1">
+      <thead>
+        <tr>
+          <th colspan="4">Student data</th>
+        </tr>
+      </thead>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Contact</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="2" colspan="2">Ram</td>
+          <td>65fdsg746</td>
+          <td>ram@</td>
+        </tr>
+        <tr>
+          <td>Sumit</td>
+          <td>90865746</td>
+          <td>sumit@</td>
+        </tr>
+        <tr>
+          <td>Yash</td>
+          <td>65746</td>
+          <td>yash@</td>
+        </tr>
+        <tr>
+          <td>Gaurav</td>
+          <td>65746</td>
+          <td>gaurav@</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Input tag -->
+    <label for="pas">password</label>
+    <input
+      type="password"
+      placeholder="Enter your password"
+      name="UserPassowrd"
+      id="pas"
+      required
+    />
+
+    <!-- button -->
+    <button type="submit">Submit</button>
+
+    <!-- Non-semantic tags -->
+    <div></div>
+    <span></span>
+
+    <!-- semantic tags -->
+    <!-- seo purpose , -->
+    <header></header>
+    <footer></footer>
+    <aside></aside>
+    <section></section>
+    <article></article>
+  </body>
+</html>

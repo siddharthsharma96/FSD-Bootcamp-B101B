@@ -1,0 +1,93 @@
+.flexContainer {
+  border: 3px solid red;
+  height: 100vh;
+  display: flex;
+  /* main axis
+  /* justify-content: center; */
+  /* cross axis */
+  /* align-items: center; */
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  /* justify-content: flex-end; */
+  /* justify-content: flex-end; */
+  /* flex-wrap: wrap-reverse; */
+  /* align-content: flex-end; */
+  /* flex-flow: row wrap; */
+  /* align-items: baseline; */
+}
+
+.flexItem {
+  background-color: yellow;
+  color: red;
+  font-size: 26px;
+  height: 50px;
+  width: 50px;
+  border: 1px solid red;
+}
+
+.id6 {
+  /* order: 1;
+  align-self: center; */
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+header {
+  background-color: #3d3d3d;
+  padding: 30px 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.6;
+}
+ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+  font-weight: 700;
+}
+
+@media (max-width: 576px) {
+  ul {
+    flex-direction: column;
+  }
+}
+
+body {
+  background-color: lightgrey;
+  padding: 10px;
+}
+.cardContainer {
+  display: flex;
+  justify-content: space-around;
+}
+.cards {
+  background-color: white;
+  width: 20%;
+  border-radius: 6px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+p {
+  color: brown;
+  font-size: 20px;
+  font-weight: 700;
+}
+span {
+  font-size: 14px;
+}
+
+@media (max-width: 878px) {
+  .cards {
+    width: 16%;
+  }
+  h4 {
+    font-size: 14px;
+  }
+}
