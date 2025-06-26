@@ -1,0 +1,38 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.counterApp {
+  width: 40vw;
+  border: 2px solid black;
+  border-radius: 8px;
+  background-color: orange;
+  text-align: center;
+  padding: 30px 20px;
+}
+p {
+  font-weight: 700;
+  font-size: 34px;
+}
+.buttonContainer {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+button {
+  border: none;
+  font-weight: 700;
+  font-size: 28px;
+  color: white;
+  padding: 8px 8px;
+  border-radius: 8px;
+}
+.inc {
+  background-color: green;
+}
+
+.dec {
+  background-color: red;
+}
