@@ -1,29 +1,49 @@
 import "./App.css";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Counter from "./Counter";
 function App() {
-  // let value = 0;
-  // val=variable;
-  // setVal=Function to update the varible
-  // useState=Hook
-  // 0=default value
   let [val, setVal] = useState(0);
-
+  let ch = useRef();
   let handleIncrement = () => {
-    // val = val + 1;
     setVal(val + 1);
-    console.log("Increment button is clicked", val);
   };
-  console.log(val);
 
   let handleDecrement = () => {
-    // val = val - 1;
     setVal(val - 1);
-    console.log("Decrement button is clicked", val);
   };
+
+  // useEffect(callback function,array of dependencies);
+  // case 1:without array of dependencies
+  // It works when any state is chnaging
+  // useEffect(() => {
+  //   console.log("without array ");
+  // });
+  // case 2:empty array
+  // it will run only one time at the time of rendering
+  // useEffect(() => {
+  //   console.log("with emty array");
+  // }, []);
+  // case 3:with dependencies
+  // run when state update
+  useEffect(() => {
+    if (val < 0) {
+      let timer = setTimeout(() => {
+        setVal(0);
+        console.log("clicked");
+      }, 2000);
+      ch.current.style.color = "red";
+      // cleanup Function
+      return () => {
+        clearTimeout(timer);
+      };
+    }
+    ch.current.style.color = "green";
+    console.log(ch);
+  }, [val]);
   return (
     <div className="App">
-      <h1>Going to Develope a new App</h1>
+      <h1 ref={ch}>Going to Develope a new App</h1>
+      <p>{}</p>
       <Counter
         val={val}
         handleDecrement={handleDecrement}
