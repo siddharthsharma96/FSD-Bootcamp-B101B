@@ -1,6 +1,7 @@
+import "./../Style/cart.css";
 const Cart = () => {
   return (
-    <div>
+    <div className="cart">
       <h1>Cart Page</h1>
     </div>
   );

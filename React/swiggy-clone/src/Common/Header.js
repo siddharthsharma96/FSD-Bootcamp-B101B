@@ -16,7 +16,6 @@ const Header = () => {
       <div className="header__nav">
         <ul>
           {listOfItems.map((info) => {
-            console.log(info);
             return <Links url={info.url} name={info.name}></Links>;
           })}
         </ul>

@@ -1,6 +1,6 @@
 const Help = () => {
   return (
-    <div>
+    <div className="help">
       <h1>Help Page</h1>
     </div>
   );

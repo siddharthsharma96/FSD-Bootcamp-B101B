@@ -1,6 +1,7 @@
+import "./../Style/search.css";
 const Search = () => {
   return (
-    <div>
+    <div className="search">
       <h1>Search Page</h1>
     </div>
   );
