@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import Links from "../UI/Links";
 import listOfItems from "./../Utils/ListOfItems.json";
-const Header = () => {
+const Header = ({ cartItems }) => {
   return (
     <div className="header">
       <div className="header__logo-container">
@@ -16,7 +16,13 @@ const Header = () => {
       <div className="header__nav">
         <ul>
           {listOfItems.map((info) => {
-            return <Links url={info.url} name={info.name}></Links>;
+            return (
+              <Links
+                url={info.url}
+                name={info.name}
+                cartItems={cartItems}
+              ></Links>
+            );
           })}
         </ul>
       </div>

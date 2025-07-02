@@ -259,3 +259,8 @@
   font-weight: 700;
   cursor: pointer;
 }
+
+.cart_itemd {
+  display: flex;
+  flex-direction: column;
+}
