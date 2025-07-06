@@ -9,11 +9,12 @@ const Cart = () => {
   const [totalPrice, setTotalPrice] = useState(0);
   const navigate = useNavigate();
 
-  console.log(process.env.REACT_APP_HELLO);
+  console.log(process.env.REACT_APP_KEY);
+
   useEffect(() => {
     let total = 0;
-    cartItems.forEach((item) => {
-      total += item.quantity * item.card.info.defaultPrice;
+    cartItems.map((item) => {
+      return (total += item.quantity * item.card.info.defaultPrice);
     });
     setTotalPrice(total / 100);
   }, [cartItems]);
@@ -21,8 +22,25 @@ const Cart = () => {
   const redirectHandler = () => {
     navigate(`/`);
   };
+  const options = {
+    key: process.env.REACT_APP_KEY,
+    key_secret: process.env.REACT_APP_SECRET_KEY,
+    amount: parseInt(totalPrice * 100),
+    currency: "INR",
+    name: "ASDF",
+    order_receipt: "order_rcptid_",
+    description: "for testing",
+    handler: function (response) {
+      console.log(response);
+    },
+    theme: {
+      color: "red",
+    },
+  };
+
   const handlePayment = () => {
-    console.log("hello world");
+    var as = new window.Razorpay(options);
+    as.open();
   };
 
   return (

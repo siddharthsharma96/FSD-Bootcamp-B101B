@@ -1,6 +1,7 @@
 import "./../Style/cart.css";
 
 const AccountSection = ({ handlePayment }) => {
+  
   return (
     <div className="account">
       <div className="account__timeline"></div>
