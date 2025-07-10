@@ -14,7 +14,4 @@ app.use((req, res, next) => {
 app.use("/api/v1/tours", tourRouter);
 app.use("/api/v1/user", userRouter);
 
-PORT_NO = 9000;
-app.listen(PORT_NO, () => {
-  console.log("Server started on ", PORT_NO);
-});
+module.exports = app;
