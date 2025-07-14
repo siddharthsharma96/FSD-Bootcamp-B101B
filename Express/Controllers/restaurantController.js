@@ -14,6 +14,8 @@ exports.createRestaurant = async (req, res) => {
 exports.getAllRestaurants = async (req, res) => {
   try {
     const restaurants = await Restaurant.find();
+    console.log(restaurants);
+
     res.status(200).json({
       status: "success",
       length: restaurants.length,

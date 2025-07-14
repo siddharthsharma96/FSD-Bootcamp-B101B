@@ -1,31 +1,23 @@
 const mongoose = require("mongoose");
 
-// Item schema remains the same
-const ItemSchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  category: { type: String, required: true },
-  description: { type: String, required: true },
-  imgName: String,
-  imageId: String,
-  inStock: { type: Boolean, default: true },
-  isVeg: Boolean,
-  rating: String,
-  ratingCount: String,
-  ratingCountV2: String,
-  defaultPrice: Number,
-  price: Number,
-});
+const restaurantSchema = new mongoose.Schema(
+  {
+    name: { type: String, required: true },
+    cloudinaryImageId: { type: String },
+    locality: { type: String },
+    areaName: { type: String },
+    costForTwo: { type: String },
+    cuisines: [String],
+    avgRating: { type: Number },
+    avgRatingString: { type: String },
+    totalRatingsString: { type: String },
+    parentId: { type: String },
+    nextCloseTime: { type: String },
+    opened: { type: Boolean, default: true },
+  },
+  { timestamps: true }
+);
 
-// Section schema
-const SectionSchema = new mongoose.Schema({
-  title: { type: String, required: true },
-  itemCards: [ItemSchema],
-});
+const Restaurant = mongoose.model("Restaurant", restaurantSchema);
 
-// 🔄 NEW: Menu schema containing sections
-const MenuSchema = new mongoose.Schema({
-  menuSections: [SectionSchema],
-});
-
-const Menu = mongoose.model("Menu", MenuSchema);
-module.exports = Menu;
+module.exports = Restaurant;

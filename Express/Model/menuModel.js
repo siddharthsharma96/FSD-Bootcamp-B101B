@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 
-// Schema for an individual item inside a section
 const ItemSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -28,14 +27,13 @@ const ItemSchema = new mongoose.Schema({
   price: Number,
 });
 
-// Schema for a menu section
 const SectionSchema = new mongoose.Schema(
   {
     title: {
       type: String,
       required: [true, "Section title is required"],
     },
-    itemCards: [ItemSchema], // array of items inside the section
+    itemCards: [ItemSchema],
   },
   {
     timestamps: true,

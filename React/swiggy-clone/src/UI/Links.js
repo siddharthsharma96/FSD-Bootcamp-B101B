@@ -1,8 +1,6 @@
 import { NavLink } from "react-router-dom";
 
 const Links = ({ url, name, cartItems }) => {
-  console.log(cartItems);
-
   return (
     <li>
       <NavLink to={url}>{name}</NavLink>

@@ -14,7 +14,7 @@ const Cart = () => {
   useEffect(() => {
     let total = 0;
     cartItems.map((item) => {
-      return (total += item.quantity * item.card.info.defaultPrice);
+      return (total += item.quantity * item.defaultPrice);
     });
     setTotalPrice(total / 100);
   }, [cartItems]);

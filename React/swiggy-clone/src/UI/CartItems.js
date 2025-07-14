@@ -19,16 +19,14 @@ const CartItems = ({
           </div>
           <div className="cart-items__scrollable-content">
             {cartItems.map((r) => (
-              <div className="cart-items__added-item" key={r.card.info.id}>
-                <p>{r.card.info.name}</p>
+              <div className="cart-items__added-item" key={r._id}>
+                <p>{r.name}</p>
                 <div className="cart-items__button-container">
                   <button onClick={() => removeItem(r)}>-</button>
                   <span>{r.quantity}</span>
                   <button onClick={() => addItem(r)}>+</button>
                 </div>
-                <span>
-                  ₹ {r.card.info.defaultPrice / 100 || r.card.info.price / 100}
-                </span>
+                <span></span>
               </div>
             ))}
 

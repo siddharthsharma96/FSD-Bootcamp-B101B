@@ -10,6 +10,8 @@ import Cart from "./Pages/Cart";
 import Search from "./Pages/Search";
 import Restaurant from "./Pages/Restaurant";
 import PageNotFound from "./Pages/PageNotFound";
+import RestaurantList from "./Pages/RestaurantList";
+import CreateRestaurant from "./Pages/CreateRestaurant";
 
 const res = createBrowserRouter([
   {
@@ -35,6 +37,14 @@ const res = createBrowserRouter([
       {
         path: "/search",
         element: <Search></Search>,
+      },
+      {
+        path: "list",
+        element: <RestaurantList></RestaurantList>,
+      },
+      {
+        path: "create",
+        element: <CreateRestaurant></CreateRestaurant>,
       },
       {
         path: "*",

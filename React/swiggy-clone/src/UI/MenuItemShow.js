@@ -1,15 +1,17 @@
 const MenuItemShow = ({ r, cartItems, addItem, removeItem }) => {
-  const isItemCart = cartItems.some((i) => i.card.info.id === r.card.info.id);
+  console.log(r);
+
+  const isItemCart = cartItems.some((i) => i._id === r._id);
 
   const quantityInCart = isItemCart
-    ? cartItems.find((item) => item.card.info.id === r.card.info.id).quantity
+    ? cartItems.find((item) => item._id === r._id).quantity
     : 0;
   return (
     <div className="restaurant__menu-item-card">
       <div className="restaurant__menu-item-info">
-        <p className="restaurant__menu-item-name">{r.card.info.name}</p>
+        <p className="restaurant__menu-item-name">{r.name}</p>
         <p className="restaurant__menu-item-price">
-          {r.card.info.defaultPrice / 100 || r.card.info.price / 100}
+          {r.defaultPrice / 100 || r.price / 100}
         </p>
         {/* <p className="cuisineDesc">
             {r.card.info.description}
@@ -42,7 +44,7 @@ const MenuItemShow = ({ r, cartItems, addItem, removeItem }) => {
             Add
           </button>
         )}
-        <img src={`/images/${r?.card.info.imgName}`} alt="a" />
+        <img src={`/images/${r.imgName}`} alt="a" />
       </div>
     </div>
   );

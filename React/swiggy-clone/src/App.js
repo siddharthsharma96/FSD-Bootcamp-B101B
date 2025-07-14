@@ -45,10 +45,12 @@ function App() {
   useEffect(() => {
     const fetchRestaurants = async () => {
       try {
-        const response = await fetch("http://localhost:3000/Restaurant.json");
+        const response = await fetch(
+          "http://localhost:8000/api/v1/restaurants"
+        );
         if (response.ok) {
           const data = await response.json();
-          setRestaurants(data);
+          setRestaurants(data.data);
         }
       } catch (err) {
         console.log("Fail to fetch");
